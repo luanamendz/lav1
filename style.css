@@ -5,90 +5,51 @@
 }
 
 body {
-  background: #0b0c0e;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Georgia', 'Times New Roman', serif;
+  background: radial-gradient(circle at 20% 30%, #1a1a2e, #0a0a0f);
   color: #f0e6d2;
   overflow: hidden;
-  position: relative;
 }
 
-/* Fundo atmosférico */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 30% 40%, #1e1a16 0%, #0a0908 90%);
-  z-index: -1;
-}
-
-/* Personagem pixel art */
-#player {
-  position: absolute;
-  width: 48px;                  /* Tamanho do frame */
-  height: 48px;
-  background-image: url('img123.png');
-  background-repeat: no-repeat;
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-  left: -100px;                 /* Começa fora da tela */
-  top: 50%;
-  transform: translateY(-50%);
-  will-change: left, background-position;
-  z-index: 10;
-}
-
-/* Container da legenda */
 #legenda-container {
-  position: absolute;
-  bottom: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  max-width: 800px;
   text-align: center;
-  z-index: 20;
-  pointer-events: none;         /* Permite clicar no body para fallback de áudio */
+  max-width: 800px;
+  padding: 2rem;
 }
 
 #legenda {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 400;
   color: #f5e6d3;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+  text-shadow: 0 2px 15px rgba(0,0,0,0.7);
   opacity: 0;
   transition: opacity 0.8s ease, transform 0.4s ease, font-size 0.4s ease, color 0.4s ease;
   letter-spacing: 0.5px;
-  line-height: 1.5;
-  padding: 12px 24px;
-  background: rgba(20, 15, 10, 0.5);
-  backdrop-filter: blur(4px);
-  border-radius: 40px;
-  border-left: 3px solid #d4b28c;
+  line-height: 1.6;
+  padding: 1.2rem 2.5rem;
+  background: rgba(20, 15, 25, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 60px;
+  border-left: 4px solid #d4b28c;
   display: inline-block;
 }
 
-/* Estado visível da legenda */
 #legenda.show {
   opacity: 1;
 }
 
-/* Classe para destaque (palavras importantes) */
 #legenda.destaque {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   color: #fbb5c2;
   transform: scale(1.05);
-  text-shadow: 0 0 20px rgba(255, 180, 200, 0.6);
+  text-shadow: 0 0 25px rgba(255, 180, 200, 0.7);
   border-left-color: #ffb6c1;
 }
 
-/* Efeito de fade-out suave */
 #legenda.fade-out {
   opacity: 0;
   transition: opacity 0.5s ease;
