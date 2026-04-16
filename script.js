@@ -28,15 +28,23 @@
   // --- LINHA DO TEMPO DAS LEGENDAS (em segundos) ---
   // Cada entrada: { inicio, fim, texto, destaque }
   const legendas = [
-    { inicio: 2.0, fim: 5.5, texto: "ela é...", destaque: false },
-    { inicio: 5.8, fim: 8.5, texto: "bonita", destaque: true },        // destaque especial
-    { inicio: 9.0, fim: 12.0, texto: "e eu não sei explicar", destaque: false },
-    { inicio: 13.0, fim: 16.0, texto: "o que ela faz comigo", destaque: false },
-    { inicio: 17.0, fim: 20.0, texto: "é como se o mundo", destaque: false },
-    { inicio: 21.0, fim: 24.0, texto: "parasse só pra ver ela passar", destaque: false },
-    { inicio: 26.0, fim: 30.0, texto: "dona da minha cabeça", destaque: true },
-    { inicio: 32.0, fim: 36.0, texto: "desde o primeiro olhar", destaque: false }
-  ];
+  // primeira estrofe
+  { inicio: 2.0, fim: 5.5, texto: "ela é...", destaque: false },
+  { inicio: 5.8, fim: 8.5, texto: "bonita", destaque: true },
+  { inicio: 9.0, fim: 12.0, texto: "e eu não sei explicar", destaque: false },
+  { inicio: 13.0, fim: 16.0, texto: "o que ela faz comigo", destaque: false },
+  { inicio: 17.0, fim: 20.0, texto: "é como se o mundo", destaque: false },
+  { inicio: 21.0, fim: 24.0, texto: "parasse só pra ver ela passar", destaque: false },
+  
+  // refrão
+  { inicio: 26.0, fim: 30.0, texto: "dona da minha cabeça", destaque: true },
+  { inicio: 32.0, fim: 36.0, texto: "desde o primeiro olhar", destaque: false },
+  
+  // segunda estrofe (exemplo)
+  { inicio: 38.0, fim: 42.0, texto: "ela é um sonho", destaque: false },
+  { inicio: 43.0, fim: 47.0, texto: "que eu não quero acordar", destaque: true },
+  // ... continue conforme sua preferência
+];
 
   // Índice da legenda atual
   let indiceLegenda = 0;
